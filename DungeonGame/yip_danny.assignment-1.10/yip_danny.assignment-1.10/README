@@ -1,0 +1,26 @@
+README assign1_10
+
+The purpose is to choose our own assignment
+
+ All of them are using the algorithmn, data structure of 
+professor jeremy's code.
+
+
+********
+I had implement a  capital 'S' button which act as a shop
+
+'S' will call a shop 
+
+pc can buy items from the shop
+
+item 0 to 3 are items from the objectdescrip.txt
+
+item 3 are a level up potion, which will increase the pc speed and hp
+
+item 4 are a granade, which can be thrown to a monster to kill it directly (press g to release throw at the monster)
+
+item 5 are an atomic bomb, which will sacrifies yourself and save the world.(it will print out that u saved the world)
+
+I also implement money for the pc. every pc will earn 100 gold if a monster is killed.
+
+The shop will list the money required for the items.

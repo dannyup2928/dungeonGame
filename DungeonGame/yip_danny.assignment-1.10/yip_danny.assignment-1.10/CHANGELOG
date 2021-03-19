@@ -1,0 +1,263 @@
+CHANGELOG assign1_10
+April 26, 2019
+- play the game and try to use the shop function 
+- small bugs and errors 
+- fixed bugs and make sure the condition goes well
+
+April 24, 2019
+- fixed the shop to display the items and gold correctly
+- implement a throw method in the "grenade" in io.cpp
+- implement a level up pc method in io.cpp
+
+April 22, 2019
+- implement button "S" as a shop button
+- implement items into the shop
+- implement gold for the pc
+- include functions in pc.cpp for the shop function 
+
+
+April 16, 2019
+- include functions in io.cpp with some condition and call the function that has been implemented earlier in the pc.cpp
+- link the function key with the key boards.
+- debug and play the game.
+- fixed errors and bugs
+
+April 15, 2019
+- add methods in pc.cpp to implement those function menthioned in pdf. 
+- debug and make sure it matches the requirements
+- errors fixed
+
+April 13, 2019
+- change do combat and do move in move.cpp
+- following the rules given in the pdf
+- debug and solve the small errors
+
+
+April 10, 2019
+- having errors of segmentaion fault and floating point exception 
+- fixed by making sure monster description vector and object description vector are parsing the correct value into the vector
+- play the game and see if errors occurs
+- fixed some small bugs.
+
+
+April 7, 2019
+- changed the function generate monster by implementing the color , and monster description in npc.cpp
+- add generate object in the function of new_dungeon so every new dungeon from stairs will work
+- add generate onject in main class 
+- modified the io.cpp, display and display no fog
+
+
+April 6, 2019
+- added a object.cpp and object.h class
+- implement 3 functions which is generate object, delete object and a constructor.
+- fixed compile errors.
+
+
+
+April 3, 2019
+- fix the errors for strings, and symbols
+- having error of infinity loop 
+- fixed it by placing the correct getline method in the code
+- check if the output is same with the input
+
+April 1, 2019
+- copy adn paste the monster_desc.txt into .rlg327
+- make a dice.h file.
+- create a class dice in dice.h
+- having 3 variables, which is base, dice , and sides 
+- modified the main method inside rlg327.cpp
+- use getline() method to get the line from the .txt file
+- print them out in the console
+
+
+March 27, 2019
+- fix the errors and bugs in the teleport
+- check if the buttons are correct
+
+March 25, 2019
+- fixed bugs for the fog display 
+- added functional key of "f"and "t" as mention in the pdf
+- added fundtion of io_teleport_pc_not_randomly
+- using the code given by professor which is in io_teleport_pc
+
+
+March 22, 2019
+- fixed and run the code to make sure it works in .cpp
+- having an error of ./rlg327: /usr/lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by ./rlg327)
+- fixed by using 2 lines of code that is written inside README(see README)
+- add the io_display_fog function, which will only display maximum 5x5 light radius
+
+
+March 20, 2019
+-change all the files from .c to .cpp
+-change all the struct to class and public 
+-fixed all the errors in the console 
+- casting are required especially for malloc 
+- added a pc_pc in dungeon.h
+- change most of the dungeon.pc to dungeon.pc_pc
+- pc_pc is a type class of pc which inherites character
+- npc also inherites character 
+
+March 13, 2019
+- create a print_curses function that with mvaddch to add the symbol and print them out.
+- fixed bugs for Quit function,added clear and refresh in print curses, fix the dungeon output after pc player enter a stairs
+
+March 11, 2019
+- deleted function pc_next_pos in pc.c.  Use getChar to get the key enter by player
+- different key are having different function as written in the pdf.
+- make sure it wont move if it is an invalid move
+
+March 9, 2019
+-implement curses in the code so that the pc can be moved manually
+- modified professor jeremy code in rlg327.c, so that it can print out render curses  everytime
+- using clear and refresh to make sure it prints out correctly
+
+Feb. 27,2019
+-set the number of monster to 10 initially
+-number of monster can be choosen by the player using ./rlg327 --nummon 10
+-initialize heap, type, pc, generate monster in the main first, then call the characteristic of monster, so it can be stored in heap
+-print the dungeon once after initializing is completed
+- remove the heap and move the npc by sequence , then add them back to the heap inside of a while loop
+- run the program
+- debug the program
+- fix errors in method like generate monster(the condition and placed to generate), the heap in the characteristic
+- the algoritmn in the main
+
+Feb. 24,2019
+- implement method able to see pc position. Some monster can only see the pc player in certain distance of 5
+- implement the characteristic of the monster
+- let the pc move rendomly
+- the monster are following the characteristic they are having
+-  there are 50% chance for the monster to be really erratic
+- implement myNPCrender_dungeon function 
+- using algorithm provided by the professor code
+- implement initialize type of npc method, make sure all of them are initially pf type 'X'
+- initialize pc method, given the pc a type of '@' and initialize it
+- 
+Feb. 23,2019
+- start coding in rlg327.c
+- implement a generate monster fuction
+- implement a type def struct of npc in dungeon.h
+- having a npc of type npc_t in type def dungeon 
+- set random numbers for npc position and random characteristic 
+- implement chasing method, chase straight, chase smart, and stand still
+- in chase straight, it will not choose the shortest distance
+- in chase smart, it will choose the nearest distance everytime
+- if stand still, it will not move
+
+
+
+CHANGELOG assign1_03
+
+Feb. 14,2019
+- run the program
+- bugs is found- the the welldone.rlg327 output is not correect.
+- the "X" is not displaying, but it display some "7" and some "special symbols"
+- bugs fixed by just adding condition to the render an make sure it is not max/infinite
+- call myrendernontunneling and my render tunneling in the main before delete dungeon.
+
+
+Feb, 11 ,2019
+- modified the non tunneling path by heap insert only when hardness is equals to 0 
+- add modified the direction from 4 to 8 because the moster can go in 8 direction 
+-in the render non tunneling, it is calling the dijkstra function, then putcharacter to the dungeon. 
+- myint is calculating the cost of the path mod by 10
+- "X" is placed if it is infinity or the floor is not accesable.
+- use the same algorithm in the disjkstra tunelling path.
+- biggest difference is to add the weight to the distance cost
+
+
+Feb, 11 ,2019
+- study the prefessor's code 
+- using the professor's code and modify
+- add 2 new typedef struct, one for tunneling path, another for non-tunneling path
+- add a tunneling path cmp and a non tunneling path cmp by refering to the professor's code
+- add 2 function, 1 is the dijkstra tunneling path, and the another is dijkstra non tunneling path 
+- add 2 render function,one is for tunneling and another for non tunneling 
+
+
+
+Feb. 8,2019
+- test the code by loading the saved dungeon provided.
+- fixed bugs like the size of rooms array.
+- test the function of save, load, load save, save load, and default.
+- fixed some small bugs like the x and y axis are placed in the opposite way.
+- submit it.
+
+
+Feb. 7,2019
+- saveFunction() is similar with loadFunction(). Just change file open to path "w" instaed of "r"
+- change the fread to fwrite, and change the order. We dont have to read and put the data to our variables,
+- but we do have to get the data from our variables and write it to the file
+- follow the bytes needed to write in the document provided
+
+
+Feb. 6,2019
+- added 2 function, saveFunction() and loadFunction()
+- added 3 struct type - Stair, Room, and Dungeon
+- open a file inside load function path is (Home -> student -> .rlg327 -> dungeon)
+- use fread to read the bytes correctly by following the table guide that is provided in pdf
+- for the hardness, read the hardness from file and use the information to insert symbols in local dungeon
+- print the boarders for the dungeon 
+- read the number of rooms, convert it using htobe16
+- take the number of rooms and placed it into struct of dungeon of rooms, so that it can be printed out later.
+- add '.' to the position where rooms are with after reading the position from the file
+- Do the same thing for stairs.
+
+
+Feb. 5,2019
+- adding int main(int argc, char *argv[])
+- can takes in the save , load , save and load key, and default
+- By entering "assign1_02"
+- save will go to create a new dungeon and save it with the saveFunction()
+- load will load the existing dungeon file in the path of : Home -> student -> .rlg327 -> dungeon
+- load and save will call loadFunction(), print the dungeon, and save it.
+- to run load, use "--load", use "--save", "--load --save" or nothing when running it.
+
+CHANGELOG assign1_02
+
+Jan. 31,2019
+- adding code in main()
+- initialize dungeon()
+- print out the dungeon
+- tested and debug
+- added the Hardness of the elements in the dungeon
+- fixed the out of bounds errors and make sure the dungeon is inside the fixed coloumn and row
+- create and placed README, CHANGLOG, MakeFile, assign1_01.c in a folder 
+- zip and submit 
+
+
+Jan. 28,2019
+- implements create stairs function 
+- create stairs at random position and it will only be at floor('#'or '.') 
+- generate random numbers of stairs
+- make sure the steps are not overlapped with each other
+- implements draw_rooms_corridors_stairs function
+- randomize position of the room, width and height
+- create rooms, corridors, stairs
+
+
+Jan. 25,2019
+- implements create corridor function
+- find the midpoints of 2 rooms (use the y axis of a room and x axis for another room)
+- create function of corridor direction left, right and up, down to determine the moving direction
+- for y axis, 1 is up, -1 is down.
+- for x axis, 1 is left, -1 is right
+- connect the the both room to their midpoint and draw '#' for corridors
+
+
+
+Jan. 23,2019
+- initialize the Dungeon as a 2d array with space and borders (80 x 21)
+- implement create rooms function 
+- draw '.' for rooms
+- make sure the room is not overlapped or sticked with another 2d array(tempDungeon)
+- set size of the rooms to meet the requirement
+- make sure the rooms is not outside the borders
+- debug and fix errors of segmentation fault(out of bounds)
+
+
+
+
+
+
